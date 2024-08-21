@@ -1,6 +1,6 @@
 import SearchBar from "@/components/SearchBar";
 import TaskBox from "@/components/TaskBox";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, Pressable } from "react-native";
 
 const tasks = [
   {
@@ -41,7 +41,22 @@ const HomeScreen = () => {
         })}
       </View>
       <View style={HomeStyles.addStyle}>
-        <Text style={{ fontSize: 20 }}>+</Text>
+        <Pressable
+          style={{
+            flex: 1,
+            justifyContent: "center",
+            backgroundColor: "#3F7281",
+          }}>
+          <Text
+            style={{
+              fontSize: 20,
+              color: "white",
+              textAlign: "center",
+              verticalAlign: "middle",
+            }}>
+            +
+          </Text>
+        </Pressable>
       </View>
     </View>
   );
@@ -63,17 +78,21 @@ const HomeStyles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     height: 20,
+    marginLeft: 20,
+    marginRight: 20,
+    marginBottom: 10,
   },
   tasksStyle: {
     flex: 8,
     alignItems: "center",
-    margin: 20,
+    marginLeft: 20,
   },
   addStyle: {
     flex: 1,
-    backgroundColor: "#3F7281",
     alignSelf: "flex-end",
     width: 50,
+    marginRight: 20,
+    marginBottom: 20,
   },
 });
 
