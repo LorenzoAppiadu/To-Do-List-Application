@@ -2,17 +2,31 @@
 
 ## Software Development LifeCycle
 
-1. Communication
-   Develop a mobile application that can track tasks that have to be completed, their deadlines and their urgencies
+### Communication
 
-2. Requirement Gathering
-   Single Page, Input fields, List of tasks, ranked according to their deadlines, Notification if a deadline is close, \*Customize Settings
+Develop a mobile application that can track tasks that have to be completed, their deadlines and their urgencies
 
-3. Feasibility Study
-   The project is analyzed to be financial, practically and technologically feasible
+- Target Users: The application will be for general users.
+- User Stories: "I want to be able to organize my tasks properly"
 
-4. System Analysis
-   Due to the small nature of this project, the waterfall approach will be used to develop the system
+### Requirement Gathering
 
-5. Software Design
-   The software will be built using react native,
+#### Functional Requirements
+
+- Task Input: Users should be able to add edit or delete tasks
+- Ranking: Users should be able to rank urgency, high,medium,low
+- Notification: Users should be able to get notifications to complete tasks
+- Task Completion: Users should be able to mark a task as complete
+- Customize Settings: Users should be able to change UI themes
+
+### Feasibility Study
+
+- Technological Feasibility: React Native will be used for app development, Redux for state management and Firebase for notifications
+
+### System Analysis
+
+Agile Development methodology is chosen for this project since there app will have to be adapted more
+
+### Software Design
+
+SOLID principles will be incorporated in this project.
