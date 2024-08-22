@@ -1,6 +1,7 @@
 import SearchBar from "@/components/SearchBar";
 import TaskBox from "@/components/TaskBox";
-import { View, Text, StyleSheet, Pressable } from "react-native";
+import { Link } from "expo-router";
+import { View, Text, StyleSheet, Pressable, Alert } from "react-native";
 
 const tasks = [
   {
@@ -41,22 +42,18 @@ const HomeScreen = () => {
         })}
       </View>
       <View style={HomeStyles.addStyle}>
-        <Pressable
-          style={{
-            flex: 1,
-            justifyContent: "center",
-            backgroundColor: "#3F7281",
-          }}>
-          <Text
-            style={{
-              fontSize: 20,
+        <Link
+          href={"/new"}
+          style={[
+            {
+              fontSize: 40,
               color: "white",
               textAlign: "center",
-              verticalAlign: "middle",
-            }}>
-            +
-          </Text>
-        </Pressable>
+            },
+            HomeStyles.addButtonStyle,
+          ]}>
+          +
+        </Link>
       </View>
     </View>
   );
@@ -93,6 +90,12 @@ const HomeStyles = StyleSheet.create({
     width: 50,
     marginRight: 20,
     marginBottom: 20,
+  },
+  addButtonStyle: {
+    flex: 1,
+    alignItems: "center",
+    backgroundColor: "#3F7281",
+    borderRadius: 10,
   },
 });
 

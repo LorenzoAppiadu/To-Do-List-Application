@@ -32,8 +32,23 @@ export default function RootLayout() {
 
   return (
     <ThemeProvider value={colorScheme === "light" ? DarkTheme : DefaultTheme}>
-      <Stack>
+      <Stack
+        screenOptions={{
+          headerStyle: {},
+          title: "",
+          headerTintColor: "#000",
+          headerTitleStyle: {
+            fontWeight: "bold",
+            color: "#000",
+          },
+          headerTitleAlign: "center",
+          headerShadowVisible: false,
+        }}>
         <Stack.Screen name="index" options={{ headerShown: false }} />
+        <Stack.Screen
+          name="new"
+          options={{ headerShown: true, title: "New Tasks" }}
+        />
       </Stack>
     </ThemeProvider>
   );
