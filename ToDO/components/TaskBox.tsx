@@ -1,4 +1,5 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Link } from "expo-router";
+import { Pressable, StyleSheet, Text, View } from "react-native";
 
 type TaskType = {
   task: string;
@@ -15,13 +16,15 @@ const TaskBox = ({ task, date }: TaskType) => {
         height: 40,
         alignItems: "flex-start",
       }}>
-      <View style={TaskBoxStyle.checkBoxStyle}>
+      <Pressable style={TaskBoxStyle.checkBoxStyle}>
         <Text style={{ justifyContent: "center" }}>Check</Text>
-      </View>
-      <View style={{ flex: 5, marginLeft: 10 }}>
-        <Text style={TaskBoxStyle.taskTextStyle}>{task}</Text>
-        <Text style={TaskBoxStyle.dateTextStyle}>{date}</Text>
-      </View>
+      </Pressable>
+      <Link href="/edit" asChild>
+        <Pressable style={{ flex: 5, marginLeft: 10 }}>
+          <Text style={TaskBoxStyle.taskTextStyle}>{task}</Text>
+          <Text style={TaskBoxStyle.dateTextStyle}>{date}</Text>
+        </Pressable>
+      </Link>
     </View>
   );
 };

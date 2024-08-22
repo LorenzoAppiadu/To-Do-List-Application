@@ -3,8 +3,9 @@ import { Pressable, StyleSheet, Text, TextInput, View } from "react-native";
 type InputBoxType = {
   placeholder: string;
   type: "task" | "deadline" | "notes";
+  value?: string;
 };
-const InputBox = ({ placeholder, type }: InputBoxType) => {
+const InputBox = ({ placeholder, type, value }: InputBoxType) => {
   return (
     <>
       {type == "notes" ? (
@@ -21,8 +22,9 @@ const InputBox = ({ placeholder, type }: InputBoxType) => {
               flex: 1,
               color: "#3F7281",
               textAlignVertical: "top",
-            }}
-          />
+            }}>
+            {value}
+          </TextInput>
         </View>
       ) : (
         <View style={searchbarStyle.inputBox}>
