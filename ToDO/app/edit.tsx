@@ -32,9 +32,11 @@ const EditTask = ({}: EditType) => {
       </View>
 
       <View style={{ flex: 1, flexDirection: "row", justifyContent: "center" }}>
-        <Pressable style={editStyle.saveButton}>
-          <Text style={{ color: "#fff" }}>Save</Text>
-        </Pressable>
+        <Link href="/notifications" asChild>
+          <Pressable style={editStyle.saveButton}>
+            <Text style={{ color: "#fff" }}>Save</Text>
+          </Pressable>
+        </Link>
         <Link href="/" asChild>
           <Pressable style={editStyle.cancelButton}>
             <Text style={{ color: "white" }}>Delete</Text>

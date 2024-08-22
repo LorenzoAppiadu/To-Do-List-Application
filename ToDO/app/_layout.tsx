@@ -53,6 +53,10 @@ export default function RootLayout() {
           name="edit"
           options={{ headerShown: true, title: "Edit Task" }}
         />
+        <Stack.Screen
+          name="notifications"
+          options={{ headerShown: true, title: "Notifications" }}
+        />
       </Stack>
     </ThemeProvider>
   );
